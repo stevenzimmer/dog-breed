@@ -144,7 +144,7 @@ function App() {
                     {state.playing === false &&
                         Boolean(state.bigCollection.length) &&
                         !state.currentQuestion && (
-                            <div>
+                            <div className="px-12">
                                 <HomeScreen />
                                 <PlayButton dispatch={dispatch}>
                                     Play
@@ -154,7 +154,7 @@ function App() {
                     {(state.timeRemaining <= 0 || state.strikes >= 3) &&
                         state.currentQuestion && (
                             <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md text-center text-white flex items-center justify-center">
-                                <div>
+                                <div className="px-12">
                                     <KillScreen state={state} />
                                     <PlayButton dispatch={dispatch}>
                                         Play Again
